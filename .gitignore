@@ -1,0 +1,12 @@
+# User-specific files
+.idea/
+*.DotSettings.user
+
+# Build output directories
+**/obj/
+**/bin/
+
+# Card set specific files
+BeladaGameFrontend/BeladaGameFrontend/wwwroot/images/cards/*
+!BeladaGameFrontend/BeladaGameFrontend/wwwroot/images/cards/default.png
+ShardTypes/Cards.cs
