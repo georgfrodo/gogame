@@ -9,7 +9,6 @@ public partial class Home
 {
    private HubConnection? _hubConnection;
    private readonly List<string> _messages = [];
-   private bool _loading = true;
    private bool _ingame;
 
    private Player _player = new();
@@ -43,7 +42,6 @@ public partial class Home
       await _hubConnection.StartAsync();
       
       Players = await Http.GetFromJsonAsync<List<Player>>("/players");
-      _loading = false;
    }
 
    public async ValueTask DisposeAsync()
