@@ -162,7 +162,7 @@ public partial class GameComponent
 
     private string GetImagePath()
     {
-        return $"images/{_currentCard?.ImageName ?? "default.png"}";
+        return $"images/cards/{_currentCard?.ImageName ?? "default.png"}";
     }
 
     private async Task DrawCard()
