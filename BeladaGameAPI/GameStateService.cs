@@ -47,13 +47,13 @@ public class GameStateService
         var deck = Cards.AvailableCards;
 
         // Duplicate some cards randomly in the deck
-        var random = new Random();
+        // var random = new Random();
 
-        for (var i = 0; i < 10; i++)
-        {
-            var card = deck[random.Next(deck.Count)];
-            deck.Add(card);
-        }
+        // for (var i = 0; i < 10; i++)
+        // {
+        //     var card = deck[random.Next(deck.Count)];
+        //     deck.Add(card);
+        // }
 
         var shuffledDeck = deck.OrderBy(_ => Guid.NewGuid()).ToList();
 
