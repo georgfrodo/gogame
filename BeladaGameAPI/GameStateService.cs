@@ -93,10 +93,17 @@ public class GameStateService
         _numberOfPlayers--;
         await _context.Clients.All.PlayerRemoved(name);
 
-        if (_currentPlayer.Name == name)
+        if (_currentPlayer != null && _currentPlayer.Name == name)
         {
-            await _context.Clients.All.NextPlayer(_players.First().Name);
-            _currentPlayer = _players.First();
+            if (_players.Any())
+            {
+                await _context.Clients.All.NextPlayer(_players.First().Name);
+                _currentPlayer = _players.First();
+            }
+            else
+            {
+                _currentPlayer = null!;
+            }
         }
     }
 

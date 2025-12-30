@@ -85,7 +85,7 @@ public partial class Home
             _passwordError = "Error validating password. Please try again.";
          }
       }
-      catch (Exception ex)
+      catch
       {
          _passwordError = "Error connecting to server. Please try again.";
       }
