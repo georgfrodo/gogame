@@ -42,11 +42,7 @@ body {
     color: var(--black);
 }
 
-.container {
-}
-
 .card {
-
     color: white;
 }
 
@@ -57,6 +53,7 @@ body {
 .card-title {
     color: white;
 }
+
 .card-text {
     color: white;
 }

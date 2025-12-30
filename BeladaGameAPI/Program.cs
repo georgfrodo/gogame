@@ -25,6 +25,18 @@ app.UseCors(p => p.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 app.UseHttpsRedirection();
 app.MapHub<GameHub>("/gamehub");
 
+app.MapPost("/validatepassword", ([FromBody] string password) =>
+{
+    // Password from environment variable
+    string correctPassword = Environment.GetEnvironmentVariable("GAME_PASSWORD") ?? "";
+    
+    if (password == correctPassword)
+    {
+        return Results.Ok(new { success = true });
+    }
+    
+    return Results.Ok(new { success = false });
+});
 
 app.MapGet("/startgame", (GameStateService gameStateService) =>
 {
