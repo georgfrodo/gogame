@@ -37,9 +37,10 @@ h1:focus {
 }
 
 body {
-    background-image: url("images/novagamebg.jpg");
+    background-image: url("images/background.png");
+    background-position: center;
     background-size: cover;
-    color: var(--black);
+    color: #f0f0f0;
 }
 
 .card {
