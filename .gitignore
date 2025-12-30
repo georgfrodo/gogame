@@ -5,8 +5,11 @@
 # Build output directories
 **/obj/
 **/bin/
+publish/
 
 # Card set specific files
 BeladaGameFrontend/BeladaGameFrontend/wwwroot/images/cards/*
 !BeladaGameFrontend/BeladaGameFrontend/wwwroot/images/cards/default.png
 ShardTypes/Cards.cs
+
+ShardTypes/BaseAddress.cs

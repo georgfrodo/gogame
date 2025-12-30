@@ -9,7 +9,7 @@
     <ItemGroup>
         <PackageReference Include="Blazor.Bootstrap" Version="2.2.0" />
         <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.6" />
-        <ProjectReference Include="..\..\BeladaGameAPI\BeladaGameAPI.csproj" />
+        <ProjectReference Include="..\..\ShardTypes\ShardTypes.csproj" />
         <ProjectReference Include="..\BeladaGameFrontend.Client\BeladaGameFrontend.Client.csproj"/>
         <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.5"/>
     </ItemGroup>
