@@ -1,8 +1,7 @@
-﻿// TODO: COPY THIS FILE AS Cards.cs AND ADD YOUR CARDS
+﻿// TODO: ADD YOUR CARDS HERE
 
 namespace ShardTypes;
 
-//Available card types: CardType.Action, CardType.Trap, CardType.Effect
 public static class Cards
 {
     public static List<Card> AvailableCards = new()
@@ -17,11 +16,20 @@ public static class Cards
         },
         new Card()
         {
-            Name = "Second Card Title",
-            Description = "You drink",
+            Name = "Trap Card Title",
+            Description = "Trap description",
             NumberOfDrinks = 1,
-            Type = CardType.Action,
+            Type = CardType.Trap,
             ImageName = "card2.png",
+        },
+        new Card()
+        {
+            Name = "Effect Card",
+            Description = "You now have an effect",
+            NumberOfDrinks = 1,
+            Type = CardType.Effect,
+            Duration = 3,
+            ImageName = "card3.png",
         },
         // Add more cards here
     };
