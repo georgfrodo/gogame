@@ -9,9 +9,9 @@
         <div class="center-content">
             <div class="card" style="max-width: 400px; width: 100%;">
                 <div class="card-body">
-                    <h3 class="card-title text-center">Enter Password</h3>
+                    <h3 class="card-title text-center">Passwort</h3>
                     <div class="form-group mb-3">
-                        <input type="password" class="form-control" @bind="Password" placeholder="Enter game password"/>
+                        <input type="password" class="form-control" @bind="Password" placeholder="Passwort eingeben"/>
                     </div>
                     @if (!string.IsNullOrEmpty(_passwordError))
                     {
@@ -24,11 +24,11 @@
                             @if (_validatingPassword)
                             {
                                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                <text> Validating...</text>
+                                <text>Validieren...</text>
                             }
                             else
                             {
-                                <text>Enter Game</text>
+                                <text>Spiel beitreten</text>
                             }
                         </button>
                     </div>
@@ -38,23 +38,23 @@
     }
     else if (!_ingame)
     {
-        <button class="btn btn-secondary position-absolute" style="top: 20px; left: 20px; z-index: 10;" @onclick="BackToPasswordScreen">← Back</button>
+        <button class="btn btn-secondary position-absolute" style="top: 20px; left: 20px; z-index: 10;" @onclick="BackToPasswordScreen">← zurück</button>
         
         <div class="center-content">
             <div class="card" style="max-width: 400px; width: 100%;">
                 <div class="card-body">
-                    <h3 class="card-title text-center">Join Game</h3>
-                    
+                    <h3 class="card-title text-center">Spiel beitreten</h3>
+
                     <div class="form-group mb-3">
-                        <input type="text" class="form-control" @bind="Name" placeholder="Enter your name"/>
+                        <input type="text" class="form-control" @bind="Name" placeholder="Gib deinen Namen ein"/>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button class="btn btn-primary" @onclick="EnterGame" disabled="@string.IsNullOrWhiteSpace(Name)">Enter Game</button>
+                        <button class="btn btn-primary" @onclick="EnterGame" disabled="@string.IsNullOrWhiteSpace(Name)">Spiel beitreten</button>
                     </div>
                 </div>
             </div>
 
-            <h1 class="text-center mt-4" style="color: white;">Current players:</h1>
+            <h1 class="text-center mt-4" style="color: white;">Aktuelle Spieler:</h1>
             <ul class="list-group" style="max-width: 400px; width: 100%;">
                 @if (Players != null)
                 {
@@ -70,7 +70,7 @@
     {
         <GameComponent Player="_player"/>
         <div class="d-flex justify-content-center mt-3">
-            <button class="btn btn-danger" @onclick="LeaveGame">Leave Game</button>
+            <button class="btn btn-danger" @onclick="LeaveGame">Spiel verlassen</button>
         </div>
     }
 </div>
